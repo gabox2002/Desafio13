@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Desafio 13</title>
+</head>
+
+<body>
+    <div class="div_title">
+        <h1 class="form__title">Formulario</h1>
+    </div>
+    <div class="form__summary" id="formSummary"></div>
+
+    <form class="formulario">
+        <div class="fila">
+            <div class="campo">
+                <label for="primerNombre" class="form__label">Primer nombre:</label>
+                <input type="text" id="primerNombre" name="primerNombre" class="form__input" autocomplete="off" />
+                <div class="form__error" id="errorPrimerNombre"></div>
+            </div>
+            <div class="campo">
+                <label for="primerApellido" class="form__label">Primer apellido:</label>
+                <input type="text" id="primerApellido" name="primerApellido" class="form__input" autocomplete="off" />
+                <div class="form__error" id="errorPrimerApellido"></div>
+            </div>
+        </div>
+
+        <div class="fila">
+            <div class="campo">
+                <label for="tipoDocumento" class="form__label">Tipo de documento:</label>
+                <div class="form__radio-options">
+                    <div class="form__radio-label">
+                        <input type="radio" name="tipoDocumento" value="dni" class="form__radio-input"
+                            autocomplete="off" required />
+                        <span>DNI</span>
+                    </div>
+                    <div class="form__radio-label">
+                        <input type="radio" name="tipoDocumento" value="cuil" class="form__radio-input"
+                            autocomplete="off" required />
+                        <span>CUIL</span>
+                    </div>
+                </div>
+                <div class="form__error" id="errorTipoDocumento"></div>
+            </div>
+            <div class="campo">
+                <label for="numeroDocumento" class="form__label">Número de documento:</label>
+                <input type="text" id="numeroDocumento" name="numeroDocumento" class="form__input" autocomplete="off" />
+                <div class="form__error" id="errorNumeroDocumento"></div>
+            </div>
+        </div>
+
+        <div class="fila">
+            <div class="campo">
+                <label for="direccion" class="form__label">Dirección:</label>
+                <textarea id="direccion" name="direccion" class="form__textarea" autocomplete="off"></textarea>
+                <div class="form__error" id="errorDireccion"></div>
+            </div>
+        </div>
+        <div class="fila">
+            <div class="campo">
+                <label for="email" class="form__label">Email:</label>
+                <input type="email" id="email" name="email" class="form__input" autocomplete="off" />
+                <div class="form__error" id="errorEmail"></div>
+            </div>
+
+            <div class="campo">
+                <label for="Birthday" class="form__label">Fecha de nacimiento:</label>
+                <input type="date" id="Birthday" name="Birthday" class="form__input" autocomplete="off" />
+                <div class="form__error" id="errorBirthday"></div>
+            </div>
+        </div>
+
+        <div class="fila">
+            <div class="campo">
+                <label for="codigoPostal" class="form__label">Código postal:</label>
+                <input type="text" id="codigoPostal" name="codigoPostal" class="form__input" autocomplete="off" />
+                <div class="form__error" id="errorCodigoPostal"></div>
+            </div>
+
+            <div class="campo">
+                <label for="claveSecreta" class="form__label">Clave secreta:</label>
+                <div class="form__password">
+                    <input type="password" class="passw" id="claveSecreta" name="claveSecreta" autocomplete="off" />
+                    <img src="./img/Show.png" alt="" class="icon" id="Eye" onclick="validatePassword('claveSecreta')" />
+                </div>
+                <div class="form__error" id="errorPassword"></div>
+            </div>
+        </div>
+
+        <div class="fila">
+            <div class="campo">
+                <label for="foto" class="form__label">Foto:</label>
+                <input type="file" id="foto" name="foto" class="" accept="image/*" />
+                <div class="form__error" id="errorFoto"></div>
+                <img id="previewFoto" class="previewFoto" src="" alt="Previsualización de la foto"/>
+            </div>
+        </div>
+        <div class="form__button">
+            <button type="submit" class="form__button-submit">Enviar</button>
+            <button type="reset" class="form__button-reset">Resetear</button>
+        </div>
+    </form>
+    <script src="./js/validaciones.js"></script>
+</body>
+
+</html>
