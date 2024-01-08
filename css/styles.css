@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background: url("/img/fondo.jpg");
-        background-size: contain; /* Añade esta línea */
+    background: url("./img/fondo.jpg");
+    background-size: contain; 
 
 }
 

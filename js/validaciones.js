@@ -163,7 +163,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             if (selectedDocumentType.value === "dni") {
-                // Validación adicional para 1 o 2 dígitos
                 if (documentNumberValue.length < 3) {
                     showError(
                         "NumeroDocumento",
